@@ -1,0 +1,64 @@
+{
+  "RequirementsResponseFormat": {
+    "type": "object",
+    "title": "RequirementsResponseFormat",
+    "properties": {
+      "requirements": {
+        "title": "Requirements",
+        "description": "list of developer requirements for ticket. Each list element can be styled using markdown syntax",
+        "items": {
+          "type": "object", 
+          "title": "requirement",
+          "description": "A requirement item composed of items: 1.Requirement name, 2.Steps",
+          "properties": {
+            "name": {
+              "title": "A name of the requirement",
+              "type": "string"
+            },
+            "steps": {
+              "title": "List of detailed steps for current requirement",
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          },
+          "required": ["name", "steps"]
+        },
+        "type": "array"
+      },
+      "customerClarifications": {
+        "title": "Questions for customer",
+        "description": "list of questions to ask customer to clarify requirements with markdown syntax, if necessary",
+        "items": {"type": "string"},
+        "type": "array"
+      }
+    },
+    "required": [
+      "requirements", "customerClarifications"
+    ]
+  },
+  "EstimationResponseFormat": {
+    "type": "object",
+    "title": "EstimationResponseFormat",
+    "properties": {
+      "storyPoints": {
+        "title": "Story points",
+        "description": "Story points estimation in Fibonacci format",
+        "type": "number"
+      },
+      "hoursEstimation": {
+        "title": "Hours estimation",
+        "description": "Estimated time to complete task in hours",
+        "type": "number"
+      },
+      "justifications": {
+        "title": "Justifications list",
+        "description": "A list of justification for estimated hours and story points",
+        "type": "array",
+        "items": {"type": "string"}
+      }
+    },
+    "required": [
+      "storyPoints", "hoursEstimation", "justifications"
+    ]
+  }
+}

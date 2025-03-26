@@ -1,0 +1,5 @@
+{
+  "Name": "NOVA project",
+  "Description": "Nova is an internal system for company logistics management designed to optimize supply chains, warehouse management, planning freight routes and controlling transportation operations. The system minimizes delays, reduces costs and ensures transparency of processes, which leads to increased business efficiency and prompt decision-making by management",
+  "TechStack": "- **Backend:** ASP.NET Core (C#) for RESTful microservices; RabbitMQ for messaging; IdentityServer4 for SSO and MFA; PostgreSQL for data storage; Redis for caching.- **Frontend:** React for a responsive UI with Material-UI.- **Integrations:** REST APIs for GPS and ERP systems; Elasticsearch for advanced search.- **Reporting:** SSRS, DevExpress for generating Excel and PDF reports.- **DevOps:** Docker, Kubernetes, Azure DevOps; Prometheus and Grafana for monitoring.- **Hosting:** Azure for scalable deployment."
+}
